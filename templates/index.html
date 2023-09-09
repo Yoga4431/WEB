@@ -1,0 +1,640 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+    }
+    p {
+        color: #ffffff;
+    }
+</style>
+<style>
+    body {
+        background-color: #ffffffef;
+    }
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>T</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0e0e0e;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #c0c0c0;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #eeeeee;
+            background-color: #ff0000b0;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #bd4141;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .tweet {
+            background-color: #161616;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(17, 17, 17, 0.993);
+            transition: background-color 0.3s ease;
+        }
+
+        .tweet:hover {
+            background-color: #1a1a1a;
+        }
+
+        .tweet .author {
+            font-weight: bold;
+        }
+
+        .tweet .timestamp {
+            color: hsl(0, 100%, 40%);
+            font-size: 12px;
+        }
+
+        .tweet .content {
+            margin-top: 10px;
+        }
+
+        .tweet .actions {
+            margin-top: 10px;
+        }
+
+        .tweet .actions a {
+            margin-right: 10px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Kode Tweet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        .tweet {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .author {
+            font-weight: bold;
+        }
+
+        .timestamp {
+            color: #888;
+            font-size: 12px;
+        }
+
+        .content {
+            margin-top: 10px;
+        }
+
+        .actions {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tweet">
+            <div class="timestamp">update 30/Jul/2023 09:44:22</div>
+            <div class="actions">
+                <a href="https://open.spotify.com/playlist/6yY1ZjBPj4mQKw9i6OAet5?si=0dd75fe1ee3c4e06&nd=1">Buka Musik Terbaru</a>
+            </div>
+        </div>
+        <div class="tweet">
+            <div class="timestamp">update 30/Jul/2023 09:44:22</div>
+            <div class="actions">
+                <a href="https://lirik.kapanlagi.com/?_gl=1*c6qxe7*_ga*MTg2ODQzMDIxMi4xNjkwNjk2MTAw*_ga_YV9LXF9F74*MTY5MDY5OTExOC4yLjEuMTY5MDY5OTE0Ny4zMS4wLjA.">Lihat Lirik Lagu Lain</a>
+            </div>
+        </div>
+        <!-- Tambahkan lebih banyak tweet di sini -->
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .search-form {
+            display: inline-block;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-input {
+            padding: 8px;
+            border: none;
+            width: 200px;
+        }
+
+        .search-button {
+            background-color: #c50000;
+            color: #ffffff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        /* Style untuk tombol ketika di-hover */
+        .search-button:hover {
+            background-color: #d80000;
+        }
+
+        .search-results {
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-form">
+        <input type="text" class="search-input" placeholder="Cari...">
+        <button class="search-button" onclick="search()">Cari</button>
+    </div>
+
+    <div class="search-results" id="searchResults">
+        
+    </div>
+
+    <script>
+        // Data lagu dan album dalam bentuk array
+        const musicData = [
+            { title: "Linkin Park", album: "Meteora" },
+            { title: "Slipknot", album: "The End, So Far" },
+            { title: "Lamb Of God", album: "Omens" },
+            { title: "Simple Plan", album: "Get Your Heart On!" },
+            { title: "Bring me The Horizon", album: "Sempiternal" },
+            { title: "Green Day", album: "American Idiot" }, 
+            { title: "All Time Low", album: "Nothing Personal" },
+            { title: "Paramore    ", album: "Riot!" },
+            { title: "Fall Out Boy", album: "From Under the Cork Tree" },
+            { title: "Blink-182", album: "Enema of the State" },
+            { title: "Sum 41", album: "All Killer No Filler" },
+            { title: "The Offspring", album: "Americana" },
+            { title: "New Found Glory", album: "Sticks and Stones" },
+            { title: "Good Charlotte", album: "The Young and the Hopeless" },
+            { title: "Yellowcard", album: "Ocean Avenue" },
+            { title: "Mayday Parade", album: "A Lesson in Romantics" },
+            { title: "Neck Deep", album: "Life's Not Out to Get You" },
+            { title: "State Champs", album: "Around the World and Back" },
+            { title: "The Story So Far", album: "Under Soil and Dirt" },
+            { title: "Knuckle Puck", album: "Copacetic" },
+            { title: "The Wonder Years", album: "The Greatest Generation" },
+            { title: "Four Year Strong", album: "Rise or Die Trying" },
+            { title: "Tonight Alive", album: "What Are You So Scared Of?" },
+            { title: "We The Kings", album: "We The Kings" },
+        ];
+
+        // Fungsi untuk mencari lagu dan album
+        function search() {
+            const searchTerm = document.querySelector(".search-input").value.toLowerCase();
+            const searchResults = document.getElementById("searchResults");
+            searchResults.innerHTML = ""; // Mengosongkan hasil pencarian sebelumnya
+
+            const matchedSongs = musicData.filter((song) => {
+                return (
+                    song.title.toLowerCase().includes(searchTerm) ||
+                    song.album.toLowerCase().includes(searchTerm)
+                );
+            });
+
+            if (matchedSongs.length === 0) {
+                searchResults.innerHTML = "Tidak ada hasil yang cocok.";
+            } else {
+                matchedSongs.forEach((song) => {
+                    const resultItem = document.createElement("p");
+                    resultItem.textContent = `Lagu: ${song.title}, Album: ${song.album}`;
+                    searchResults.appendChild(resultItem);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Cards</title>
+</head>
+<body>
+    <div class="container">
+        <h1>GENRE MUSIC</h1>
+
+        <div class="game-card">
+            <h2>ROCK</h2>
+            <button onclick="playNow('https://open.spotify.com/playlist/37i9dQZF1DXcF6B6QPhFDv')">Play Now</button>
+        </div>
+
+        <div class="game-card">
+            <h2>POP PUNK</h2>
+            <button onclick="playNow('https://open.spotify.com/playlist/37i9dQZF1DXasneILDRM7B')">Play Now</button>
+        </div>
+
+        <div class="game-card">
+            <h2>METAL</h2>
+            <button onclick="playNow('https://open.spotify.com/playlist/37i9dQZF1DWTcqUzwhNmKv')">Play Now</button>
+        </div>
+    </div>
+
+    <script>
+        function playNow(websiteURL) {
+            // Membuka halaman web dalam tab baru
+            window.open(websiteURL, "_blank");
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h2>Putar Lagu dari Spotify</h2>
+    <iframe src="https://open.spotify.com/embed/track/6BrMEbPSSj55nQhkgf6DnE?si=9cf785f7feae43d2" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <script>
+        // Tambahkan kode JavaScript lainnya yang mungkin Anda butuhkan di sini.
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... -->
+</head>
+<body>
+    <!-- ... -->
+    <div class="controls">
+        <button id="startScroll" class="green-button">Mulai Scroll</button>
+        <button id="stopScroll" class="green-button">Hentikan Scroll</button>
+        <input type="range" id="scrollSpeedRange" min="1" max="10" step="1" value="5">
+        <label for="scrollSpeedRange">Kecepatan: <span id="speedLabel">5</span></label>
+    </div>
+    <!-- ... -->
+
+    <script>
+        var intervalId;
+        var scrollSpeed = 5; // Default scroll speed
+
+        // Function to start scrolling
+        function startScrolling() {
+            var scrollSpeedRange = document.getElementById("scrollSpeedRange");
+            scrollSpeed = parseInt(scrollSpeedRange.value);
+            
+            // Adjust scroll speed label
+            document.getElementById("speedLabel").textContent = scrollSpeed;
+            
+            // Start scrolling
+            intervalId = setInterval(function() {
+                window.scrollBy(0, scrollSpeed);
+            }, 20); // You can adjust the interval as needed
+        }
+
+        // Function to stop scrolling
+        function stopScrolling() {
+            clearInterval(intervalId);
+        }
+
+        // Event listener for the "Mulai Scroll" button
+        document.getElementById("startScroll").addEventListener("click", startScrolling);
+
+        // Event listener for the "Hentikan Scroll" button
+        document.getElementById("stopScroll").addEventListener("click", stopScrolling);
+
+        // Event listener to stop scrolling when the mouse moves
+        document.addEventListener("mousemove", function() {
+            stopScrolling();
+        });
+    </script>
+</body>
+</html>
+
+<h2>Terjemahan Dan Lirik Lagu<h2>
+
+
+
+<p>Good times for a change...</p>
+
+<p>Saat-saat yang baik untuk berubah</p>
+
+<p>See, the luck I've had...</p>
+
+<P>Lihatlah, keberuntunganku</P>
+
+<p>Can make a good man...</p>
+
+<p>Bisa membuat lelaki baik<p>
+ 
+<p>Turn Bad...</p>
+
+<p>Menjadi jahat</p>
+
+<p>So please, please, please...</p>
+
+<p>Jadi tolong, tolong, tolong</p>
+
+<p>Let me, let me, let me...</p>
+
+<p>Biarkan aku, biarkan aku, biarkan aku</p>
+
+<p>Let me get what I want...</p>
+
+<p>Biarkan aku mendapatkan apapun yang kumau</p>
+
+<p>This time...</p>
+
+<p>Kali ini</p>
+
+<p>Haven't had a dream in a long time...</p>
+
+<p>Tak pernah bermimpi sejak lama</p>
+
+<p>See, the life I've had...</p>
+
+<p>Lihatlah, hidupku</p>
+
+<p>Can make a good man Turn bad...</p>
+
+<p>Bisa membuat lelaki baik jadi jahat</p>
+
+<p>So for once in my life...</p>
+
+<p>Jadi sekali saja seumur hidupku</p>
+
+<p>Let me get what I want...</p>
+
+<p>Biarkan aku mendapatkan apa yang kuinginkan</p>
+
+<p>Lord knows, it would be the first time...</p>
+
+<p>Tuhan tahu, ini akan menjadi yang pertama kali</p>
+
+<p>Lord knows, it would be the first time...</p>
+
+<p>Tuhan tahu, ini akan menjadi yang pertama kali</p>
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Pilihan</title>
+</head>
+<body>
+    <h1>Pilih Bahasa:</h1>
+
+    <select id="bahasa">
+        <option value="id">Bahasa Indonesia</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+    </select>
+
+    <p>Bahasa: <span id="hasil"></span></p>
+
+    <script>
+        // Fungsi untuk mendapatkan pilihan bahasa yang dipilih
+        function pilihBahasa() {
+            var selectElement = document.getElementById("bahasa");
+            var selectedValue = selectElement.value;
+            var selectedText = selectElement.options[selectElement.selectedIndex].text;
+
+            document.getElementById("hasil").textContent = selectedText;
+        }
+
+        // Menambahkan event listener ke elemen <select>
+        document.getElementById("bahasa").addEventListener("change", pilihBahasa);
+
+        // Pemanggilan fungsi saat halaman web dimuat untuk menampilkan hasil awal
+        pilihBahasa();
+    </script>
+</body>
+</html>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/w3qPMe_cCJk?si=Zakaojo8QF6eCu4d&amp;start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kolom Komentar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .comment-box {
+            border: 1px solid #ececec;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .comment-box .author {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .comment-box .timestamp {
+            color: #696969;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .comment-box .content {
+            margin-bottom: 10px;
+        }
+
+        .comment-box .reply-link {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .comment-box .reply-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Komentar</h1>
+        <div class="comment-box">
+            <div class="author">bapak kau</div>
+            <div class="timestamp">10 minutes ago</div>
+            <div class="content">pelan pelan pak supir</div>
+            <a class="reply-link" href="#">Reply</a>
+        </div>
+        <div class="comment-box">
+            <div class="author">yanto</div>
+            <div class="timestamp">20 minutes ago</div>
+            <div class="content">bang cukub bang...</div>
+            <a class="reply-link" href="#">Reply</a>
+        </div>
+        <div class="comment-box">
+            <div class="author">anak detmetal</div>
+            <div class="timestamp">20 minutes ago</div>
+            <div class="content">aku ingin jadi pns...</div>
+            <a class="reply-link" href="#">Reply</a>
+        </div>
+        <!-- Tambahkan lebih banyak komentar di sini -->
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>detmetal</title>
+    <style>
+        body {
+            background-color: #050505;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #FF0000;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .game-card {
+            background-color: #1F1F1F;
+            color: #FFFFFF;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .game-card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .game-card p {
+            font-size: 16px;
+        }
+
+        .game-card button {
+            background-color: #FF0000;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .game-card button:hover {
+            background-color: #800000;
+        }
+    </style>
+
+
+{% endblock %}

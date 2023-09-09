@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Gaya CSS untuk menu samping */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #sidebar {
+            height: 100vh;
+            width: 0; /* Mulai dengan lebar 0 sehingga menu tertutup saat pertama kali dimuat */
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            transition: width 0.3s; /* Menambahkan efek transisi ketika lebar menu berubah */
+            overflow: hidden; /* Menghilangkan konten yang melebihi lebar menu saat tertutup */
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #sidebar li {
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #sidebar li:hover {
+            background-color: #555;
+        }
+
+        #content {
+            margin-left: 220px; /* Menyesuaikan jarak konten dari menu samping yang terbuka */
+            padding: 20px;
+            transition: margin-left 0.3s; /* Menambahkan efek transisi ketika jarak konten berubah */
+        }
+
+        #toggleButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+            z-index: 1; /* Mengatur tampilan tombol di atas menu samping */
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <ul>
+            <li onclick="pilihMenu('Beranda')">Beranda</li>
+            <li onclick="pilihMenu('Tentang')">Tentang</li>
+            <li onclick="pilihMenu('Kontak')">Kontak</li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <h1> </h1>
+    </div>
+
+    <!-- Tombol "Buka/Tutup Menu" -->
+    <div id="toggleButton" onclick="toggleMenu()">&#9776;</div>
+
+    <script>
+        // Fungsi untuk menampilkan pilihan yang dipilih
+        function pilihMenu(pilihan) {
+            document.getElementById("hasil").textContent = pilihan;
+        }
+
+        // Fungsi untuk buka/tutup menu samping
+        function toggleMenu() {
+            var sidebar = document.getElementById("sidebar");
+            var content = document.getElementById("content");
+            var toggleButton = document.getElementById("toggleButton");
+
+            if (sidebar.style.width === "0px") {
+                sidebar.style.width = "220px";
+                content.style.marginLeft = "220px";
+                toggleButton.style.left = "230px";
+            } else {
+                sidebar.style.width = "0";
+                content.style.marginLeft = "0";
+                toggleButton.style.left = "10px";
+            }
+        }
+    </script>
+</body>
+</html>
+
+<script>
+    // Fungsi untuk menampilkan pilihan yang dipilih
+    function pilihMenu(pilihan) {
+        // Kita akan menggunakan fetch() untuk memuat konten halaman terpisah
+        fetch(`${pilihan.toLowerCase()}.html`)
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById("content").innerHTML = content;
+                document.getElementById("hasil").textContent = pilihan; // Menampilkan pilihan di #hasil
+            });
+    }
+
+    // Fungsi untuk buka/tutup menu samping (sama seperti sebelumnya)
+    // ... (kode fungsi toggleMenu() lainnya) ...
+</script>
+
+<h2>NAMA : YOSEP YOGA JALU PAMUNGKAS</h2>
+<h2>NIM  : 71220933</h2>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h2>Terjemahan Dan Lirik Lagu The Smiths - Please, Please, Please, Let Me Get What I Want</h2>
+    <img src="https://wallpapercave.com/wp/wp2602706.jpg">
+</body>
+    <title>LIRIK LAGU </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+    
+            /* Gaya CSS untuk setiap div paragraf */
+            .paragraf {
+                margin-bottom: 20px;
+                padding: 10px;
+                border: 1px solid #ebebeb;
+                background-color: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="paragraf">
+            <p>
+                "Please, Please, Please, Let Me Get What I Want" adalah lagu yang sangat populer dari The Smiths yang ditulis oleh Morrissey dan Johnny Marr. Lagu ini dirilis pada tanggal 21 November 1984 dan dapat ditemukan dalam album "Hatful of Hollow," meskipun juga ada dalam rilisan lain seperti "The World Won't Listen" dan "Louder Than Bombs."
+
+Dengan durasi sekitar 1 menit 50 detik, lagu ini memiliki genre indie pop, indie rock, dan jangle pop. Musiknya memiliki melodi yang indah dan lirik yang sangat emosional, yang mencerminkan perasaan kesepian dan keinginan untuk mencapai apa yang diinginkan. Lagu ini berhasil menyampaikan pesan yang kuat tentang harapan dan keinginan seseorang untuk mencapai sesuatu yang diidamkan.
+
+Sejak dirilis, "Please, Please, Please, Let Me Get What I Want" telah menjadi salah satu lagu ikonik dari The Smiths dan dikenal di dunia musik indie. Lagu ini sering menjadi favorit banyak penggemar band dan terus menjadi karya yang berkesan hingga saat ini. Melodi yang menghanyutkan dan lirik yang emosional membuat lagu ini tetap relevan dan dicintai oleh pendengar dari berbagai generasi.
+
+Lagu ini juga telah menjadi sumber inspirasi bagi banyak musisi dan artis lainnya, serta telah di-cover dan diinterpretasikan ulang dalam berbagai gaya musik. Keindahan dan kesederhanaan lagu ini telah membuatnya menjadi salah satu karya paling ikonik dan dihargai dalam sejarah musik indie.
+
+Kehadiran lagu "Please, Please, Please, Let Me Get What I Want" sebagai bagian dari warisan musik The Smiths menunjukkan betapa berpengaruhnya band ini dalam dunia musik dan bagaimana karya mereka terus dikenang dan dihormati oleh penggemar dan penggemar musik di seluruh dunia.
+            </p>
+        </div>
+       
+        <img src="https://shop.recordcollectormag.com/rc/images/rcsmiths.jpg">
+
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer> 
+        &copy; Yosep Yoga Jalu Pamungkas
+        <p>&copy; 2023 Universitas Kristen Duta Wacana.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
+
